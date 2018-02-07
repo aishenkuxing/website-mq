@@ -21,7 +21,7 @@ public class SendMq {
 	   //创建链接工厂
 	   ConnectionFactory factory = new ConnectionFactory();
 	   
-	   factory.setHost("127.0.0.1");
+	   factory.setHost("localhost");
 	   
 	   Connection connection = factory.newConnection();
 	   
@@ -33,7 +33,7 @@ public class SendMq {
 	   
 	   channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
 	   
-	   System.out.println(" [x] Sent '" + message + "'");
+	   System.out.println(" [x] 发送 '" + message + "'");
 	   
 	   channel.close();
 	   
