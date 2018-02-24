@@ -14,6 +14,7 @@ import com.rabbitmq.client.Envelope;
 
 /**
  * 定义rabbitMq 接收器
+ * 
  * @author Administrator
  *
  */
@@ -21,7 +22,7 @@ public class RecvMq {
 	private final static String QUEUE_NAME = "hello";
 
 	public static void main(String[] args) throws IOException, TimeoutException {
-		
+
 		ConnectionFactory factory = new ConnectionFactory();
 		factory.setHost("localhost");
 		Connection connection = factory.newConnection();
